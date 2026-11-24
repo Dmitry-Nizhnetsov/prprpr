@@ -1,0 +1,45 @@
+program:
+  - {op: load_const, arg: 0}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1000}
+
+  - {op: load_const, arg: 1}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1001}
+
+  - {op: load_const, arg: 2}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1002}
+
+  - {op: load_const, arg: 3}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1003}
+
+  - {op: load_const, arg: 4}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1004}
+
+  - {op: load_const, arg: 5}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1005}
+
+  - {op: load_const, arg: 6}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1006}
+
+  - {op: load_const, arg: 7}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1007}
+
+  - {op: load_const, arg: 8}
+  - {op: read_mem, arg: 0}
+  - {op: unary_minus}
+  - {op: write_mem, arg: 1008}
