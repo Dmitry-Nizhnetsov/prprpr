@@ -44,18 +44,21 @@ def run_program(bytecode, dump_path, start, end):
     while pc < len(bytecode):
         b1 = bytecode[pc]
         opcode = b1 & 0b11111
+
         if opcode == 22:
             b2 = bytecode[pc + 1]
             b3 = bytecode[pc + 2]
             val = b1 | (b2 << 8) | (b3 << 16)
             acc = (val >> 5) & mask(18)
             pc += 3
+
         elif opcode == 4:
             b2 = bytecode[pc + 1]
             val = b1 | (b2 << 8)
             offset = (val >> 5) & mask(9)
             acc = memory[acc + offset]
             pc += 2
+
         elif opcode == 17:
             b2 = bytecode[pc + 1]
             b3 = bytecode[pc + 2]
@@ -64,6 +67,11 @@ def run_program(bytecode, dump_path, start, end):
             addr = (val >> 5) & mask(24)
             memory[addr] = acc
             pc += 4
+
+        elif opcode == 31:
+            acc = -acc
+            pc += 1
+
         else:
             break
 

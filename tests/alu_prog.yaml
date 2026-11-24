@@ -1,0 +1,6 @@
+program:
+  - op: load_const
+    arg: 42
+  - op: unary_minus
+  - op: write_mem
+    arg: 300
